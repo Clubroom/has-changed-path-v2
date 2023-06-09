@@ -3280,7 +3280,7 @@ async function hasChanged(pathsToSearch) {
   //  --quiet: exits with 1 if there were differences (https://git-scm.com/docs/git-diff)
   const exitCode = await exec.exec(
     "git",
-    ["diff", "--quiet", "origin/master...", "HEAD", "--", ...paths],
+    ["diff", "--quiet", "origin/master...HEAD", "--", ...paths],
     {
       ignoreReturnCode: true,
       silent: false,

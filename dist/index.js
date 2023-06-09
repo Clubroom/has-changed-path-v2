@@ -2554,29 +2554,29 @@ exports.default = _default;
 /***/ 351:
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
-
 const core = __webpack_require__(186);
 
 const hasChanged = __webpack_require__(632);
 
 async function run() {
   try {
-    const paths = core.getInput('paths', { required: true });
-    const changed = await hasChanged(paths)
+    const paths = core.getInput("paths", { required: true });
+    const changed = await hasChanged(paths);
 
     if (changed) {
-      core.info(`Code in the following paths changed: ${paths}`)
+      core.info(`Code in the following paths changed: ${paths}`);
     } else {
-      core.info(`Code in the following paths hasn't changed: ${paths}`)
+      core.info(`Code in the following paths hasn't changed: ${paths}`);
     }
 
-    core.setOutput('changed', changed)
+    core.setOutput("changed", changed);
   } catch (error) {
     core.setFailed(error.message);
   }
 }
 
 run();
+
 
 /***/ }),
 
@@ -3280,11 +3280,11 @@ async function hasChanged(pathsToSearch) {
   //  --quiet: exits with 1 if there were differences (https://git-scm.com/docs/git-diff)
   const exitCode = await exec.exec(
     "git",
-    ["diff", "--quiet", "origin/master...HEAD", "--", ...paths],
+    ["diff", "origin/master...HEAD", "--", ...paths],
     {
       ignoreReturnCode: true,
       silent: false,
-      cwd: getCWD(),
+      // cwd: getCWD(),
     }
   );
 

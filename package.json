@@ -17,7 +17,7 @@
   "homepage": "https://github.com/jesus-castro3/has-changed-path#readme",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@actions/exec": "^1.0.4"
+    "@actions/exec": "^1.1.1"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.23.0",

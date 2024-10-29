@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/jesus-castro3/has-changed-path#readme",
   "dependencies": {
-    "@actions/core": "^1.2.6",
+    "@actions/core": "^1.11.1",
     "@actions/exec": "^1.0.4"
   },
   "devDependencies": {
